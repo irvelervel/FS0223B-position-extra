@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POSITION ABSOLUTE</title>
+    <style>
+      .absolute-no-relative {
+        position: absolute;
+        top: 10px;
+        border: 3px solid green;
+      }
+
+      .relative-box {
+        position: relative;
+        border: 1px solid black;
+        width: 300px;
+        height: 250px;
+      }
+
+      #abs-1 {
+        position: absolute;
+        border: 1px solid violet;
+        background-color: red;
+        color: white;
+        /* lego indissolubilmente questo badge alla card con position: relative */
+        top: -10px;
+        right: -20px;
+      }
+
+      #abs-2 {
+        position: absolute;
+        border: 1px solid orange;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Position: absolute</h2>
+    <p>
+      Un elemento con position: absolute è posizionato in base al suo genitore
+      più prossimo con position: relative. Qualora questo genitore con position:
+      relative NON ESISTA, l'elemento con position: absolute si ancorerà ai
+      margini del viewport. Come con position: relative, anche absolute RIMUOVE
+      l'elemento dal regolare posizionamento degli altri elementi (è come se
+      venissero "sovraimpressi").
+    </p>
+    <div class="absolute-no-relative">
+      Questo div è posizionato con position:absolute e NON ha un contenitore
+      relative
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet
+      inventore suscipit nemo optio, repellat cum repellendus animi placeat
+      nihil obcaecati maxime illo. Odio, aliquam molestias? Doloribus dolorem
+      architecto porro.
+    </p>
+    <div class="relative-box">
+      <div id="abs-1">ABSOLUTE 1</div>
+      <div id="abs-2">ABSOLUTE 2</div>
+    </div>
+  </body>
+</html>

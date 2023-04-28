@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Z-INDEX</title>
+    <style>
+      .container {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        border: 2px solid black;
+        position: relative;
+        left: 100px;
+      }
+
+      .container div {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+      }
+
+      #red {
+        background-color: red;
+        z-index: 2;
+      }
+      #green {
+        background-color: green;
+        left: 30px;
+        top: 30px;
+        z-index: 1;
+      }
+      #blue {
+        background-color: blue;
+        left: 60px;
+        top: 60px;
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Proprietà z-index</h2>
+    <p>
+      Possiamo utilizzare z-index solamente se un elemento ha un valore di
+      position che NON sia static. z-index ci permette di regolare manualmente
+      la "profondità" dell'elemento. Questa proprietà accetta come valori "auto"
+      oppure un valore numerico, positivo o negativo.
+    </p>
+    <div class="container">
+      <div id="red"></div>
+      <div id="green"></div>
+      <div id="blue"></div>
+    </div>
+  </body>
+</html>
